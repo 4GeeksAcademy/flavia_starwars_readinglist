@@ -1,0 +1,11 @@
+.fondo {
+    background-image: url("https://i.postimg.cc/k42F8NbV/4DuYKpW.jpg");
+    position: fixed;
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    z-index: -2;
+    transition: opacity 0.3s;
+    opacity: 1;
+}
