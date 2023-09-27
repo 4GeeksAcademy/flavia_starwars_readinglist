@@ -1,65 +1,27 @@
-import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { useState, useContext } from "react";
 import "../../styles/home.css";
+import { Context } from "../store/appContext";
 
-export const Home = () => (
-	<div className="rigo text-center">
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>	<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<p>
-			<img src={rigoImage} />
-		</p>
+export const Home = () => {
+	const { store, actions } = useContext(Context);
+  
+	return (
+	  <div className="rigo text-center">
+		{store.planets.map((item, index) => (
+		  <div className="text-white" key={index}>
+			{item.name}
+		  </div>
+		))}
+	  </div>
+	);
+  };
 
-	</div>
-);
+
+  
+  
+  
+  
+  
+  
+
+export default Home;
