@@ -1,6 +1,31 @@
 body {
   overflow-x: hidden;
 }
+.theContainer {
+  position: relative;
+}
+.arrowButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 0;
+}
+.arrowButton:hover {
+  opacity: 1;
+}
+.arrowButton.left {
+  left: 0;
+}
+
+.arrowButton.right {
+  right: 0;
+}
 .sectionsContainer {
   width: 100rem;
   height: 20rem;
@@ -14,13 +39,6 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   align-items: center;
-}
-.arrowButton {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
 }
 
 .imgContainer {

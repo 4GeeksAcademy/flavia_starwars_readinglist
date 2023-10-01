@@ -21,12 +21,12 @@ export const Home = () => {
     actions.fetchMorePlanets();
   };
   return (
-    <div className="sectionsContainer">
-      <button className="arrowButton" onClick={() => handleScroll("left")}>
+    <div className="theContainer">
+      <button className="arrowButton left" onClick={() => handleScroll("left")}>
         <i className="fa-solid fa-chevron-left"></i>
       </button>
       <button
-        className="arrowButton"
+        className="arrowButton right"
         onClick={() => {
           handleScroll("right");
           loadMorePlanets();
@@ -34,17 +34,19 @@ export const Home = () => {
       >
         <i className="fa-solid fa-chevron-right"></i>
       </button>
-      <div className="planets text-center">
-        {store.planets.map((item, index) => (
-          <div className="imgContainer text-white" key={index}>
-            <img
-              className="imgPlanets"
-              src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`}
-              alt={item.name}
-            />
-            <span className="planetName">{item.name}</span>
-          </div>
-        ))}
+      <div className="sectionsContainer">
+        <div className="planets text-center">
+          {store.planets.map((item, index) => (
+            <div className="imgContainer text-white" key={index}>
+              <img
+                className="imgPlanets"
+                src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`}
+                alt={item.name}
+              />
+              <span className="planetName">{item.name}</span>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
