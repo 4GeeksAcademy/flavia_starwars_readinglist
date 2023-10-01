@@ -1,11 +1,54 @@
 .sectionsContainer {
   width: 70rem;
-  height: 15rem;
+  height: 20rem;
   margin-top: 25rem;
   margin-left: 5rem;
-  background-color: bisque;
-  overflow-x: scroll;
+  background-color: transparent;
+  display: flex;
+  position: relative;
 }
 .planets {
+  width: 100%;
   display: flex;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  align-items: center;
+}
+.arrowButton {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+.imgContainer {
+  width: 28%;
+  height: 90%;
+  margin-left: 1rem;
+  position: relative;
+}
+.planets .imgContainer {
+  flex-shrink: 0;
+}
+.imgPlanets {
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+.imgContainer:hover {
+  transform: scale(1.1);
+  border: 2px solid white;
+  border-radius: 2rem;
+}
+
+.planetName {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.596);
+  width: 100%;
+  padding: 0.5rem;
+  opacity: 0;
+}
+.imgContainer:hover .planetName {
+  opacity: 1;
 }
