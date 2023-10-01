@@ -1,14 +1,15 @@
+body {
+  overflow-x: hidden;
+}
 .sectionsContainer {
-  width: 70rem;
+  width: 100rem;
   height: 20rem;
   margin-top: 25rem;
-  margin-left: 5rem;
   background-color: transparent;
   display: flex;
   position: relative;
 }
 .planets {
-  width: 100%;
   display: flex;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -18,11 +19,14 @@
   background-color: transparent;
   border: none;
   color: white;
+  font-size: 2rem;
+  cursor: pointer;
 }
+
 .imgContainer {
-  width: 28%;
+  width: 18%;
   height: 90%;
-  margin-left: 1rem;
+  margin-left: 2.5rem;
   position: relative;
 }
 .planets .imgContainer {

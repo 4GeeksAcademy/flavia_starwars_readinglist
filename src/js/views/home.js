@@ -25,6 +25,15 @@ export const Home = () => {
       <button className="arrowButton" onClick={() => handleScroll("left")}>
         <i className="fa-solid fa-chevron-left"></i>
       </button>
+      <button
+        className="arrowButton"
+        onClick={() => {
+          handleScroll("right");
+          loadMorePlanets();
+        }}
+      >
+        <i className="fa-solid fa-chevron-right"></i>
+      </button>
       <div className="planets text-center">
         {store.planets.map((item, index) => (
           <div className="imgContainer text-white" key={index}>
@@ -37,15 +46,6 @@ export const Home = () => {
           </div>
         ))}
       </div>
-      <button
-        className="arrowButton"
-        onClick={() => {
-          handleScroll("right");
-          loadMorePlanets();
-        }}
-      >
-        <i className="fa-solid fa-chevron-right"></i>
-      </button>
     </div>
   );
 };
