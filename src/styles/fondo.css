@@ -1,17 +1,17 @@
 .fondo {
-  background-image: url("https://i.postimg.cc/k42F8NbV/4DuYKpW.jpg");
+  background-image: url("https://wallpapers.com/images/hd/star-wars-darth-vader-hd-bexjvbym83hk5o56.jpg");
+  background-color: black;
   position: fixed;
   object-fit: cover;
   width: 100vw;
   height: 100vh;
   background-size: cover;
   z-index: -2;
-  transition: opacity 0.3s;
-  opacity: 1;
+  transition: filter 0.7s;
 }
 .totalOpacity {
-  opacity: 1;
+  filter: brightness(100%);
 }
 .lessOpacity {
-  opacity: 0.8;
+  filter: brightness(50%);
 }
