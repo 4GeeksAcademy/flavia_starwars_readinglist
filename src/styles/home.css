@@ -1,4 +1,11 @@
+.sectionsContainer {
+  width: 70rem;
+  height: 15rem;
+  margin-top: 25rem;
+  margin-left: 5rem;
+  background-color: bisque;
+  overflow-x: scroll;
+}
 .planets {
-    margin-top: 70vh;
-    display: flex;
+  display: flex;
 }
