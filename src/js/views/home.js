@@ -1,54 +1,21 @@
 import React, { useState, useContext, useEffect } from "react";
 import "../../styles/home.css";
 import { Context } from "../store/appContext";
+import Slider from "../component/slider";
+import FilmSlider from "../component/filmSlider";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const handleScroll = (direction) => {
-    const container = document.querySelector(".planets");
-    const scrollAmount = 5 * 200;
-    if (direction === "right") {
-      container.scrollLeft += scrollAmount;
-    } else if (direction === "left") {
-      container.scrollLeft -= scrollAmount;
-    }
-    setScrollPosition(container.scrollLeft);
-  };
-
-  const loadMorePlanets = () => {
-    actions.fetchMorePlanets();
-  };
+  console.log(store.films);
   return (
-    <div className="theContainer">
-      <button className="arrowButton left" onClick={() => handleScroll("left")}>
-        <i className="fa-solid fa-chevron-left"></i>
-      </button>
-      <button
-        className="arrowButton right"
-        onClick={() => {
-          handleScroll("right");
-          loadMorePlanets();
-        }}
-      >
-        <i className="fa-solid fa-chevron-right"></i>
-      </button>
-      <div className="sectionsContainer">
-        <div className="planets text-center">
-          {store.planets.map((item, index) => (
-            <div className="imgContainer text-white" key={index}>
-              <img
-                className="imgPlanets"
-                src={`https://starwars-visualguide.com/assets/img/planets/${item.uid}.jpg`}
-                alt={item.name}
-              />
-              <span className="planetName">{item.name}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <>
+      <Slider arr_section={store.planets} name_section="planets" />
+      <Slider arr_section={store.characters} name_section="characters" />
+      <Slider arr_section={store.starships} name_section="starships" />
+      <Slider arr_section={store.vehicles} name_section="vehicles" />
+      <Slider arr_section={store.species} name_section="species" />
+      <FilmSlider arr_section={store.films} name_section="films" />
+    </>
   );
 };
 
