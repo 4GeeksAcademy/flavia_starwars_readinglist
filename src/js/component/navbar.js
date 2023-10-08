@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   return (
     <nav
-      className={`navbar mb-3 sticky-top ${
+      className={`navbar sticky-top ${
         isInView ? "bg-transparent" : "bg-black"
       }`}
     >

@@ -27,13 +27,13 @@ const Slider = ({ arr_section, name_section }) => {
       actions.fetchMoreCharacters();
     }
     if (section === "starships") {
-        actions.fetchMoreStarships();
+      actions.fetchMoreStarships();
     }
-    if (section === "vehicles"){
-        actions.fetchMoreVehicles();
+    if (section === "vehicles") {
+      actions.fetchMoreVehicles();
     }
-    if (section === "species"){
-        actions.fetchMoreSpecies();
+    if (section === "species") {
+      actions.fetchMoreSpecies();
     }
   };
 
