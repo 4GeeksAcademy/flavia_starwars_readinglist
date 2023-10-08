@@ -41,7 +41,7 @@ h4 {
 .imgContainer {
   width: 30rem;
   height: 30rem;
-  margin-left: 2.5rem;
+  margin-left: 1rem;
   position: relative;
   transition: transform 0.5s ease;
   border: 2px solid rgba(255, 255, 255, 0);
