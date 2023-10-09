@@ -26,14 +26,16 @@ export const Navbar = () => {
     >
       <Link to="/">
         <span className="navbar-brand mb-0 h1">
-          <img className="icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Star_Wars_Logo..png/640px-Star_Wars_Logo..png" />
+          <img
+            className="icon"
+            src="https://i0.wp.com/cajadevectores.com/wp-content/uploads/2023/02/BABY-YODA-12PNG.png?fit=1728%2C1728&ssl=1"
+          />
         </span>
       </Link>
       <div className="ml-auto">
         <Link to="/demo">
-          <button className="btn btn-primary">
-            Check the Context in action
-          </button>
+          <button className="nav_btn line">Stream now</button>
+          <button className="nav_btn line">Sign in</button>
         </Link>
       </div>
     </nav>
