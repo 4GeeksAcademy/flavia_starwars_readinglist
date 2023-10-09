@@ -59,6 +59,11 @@ const Slider = ({ arr_section, name_section }) => {
               <img
                 className="imgSection"
                 src={`https://starwars-visualguide.com/assets/img/${name_section}/${item.uid}.jpg`}
+                onError={({ currentTarget }) => {
+                  currentTarget.onerror = null; // prevents looping
+                  currentTarget.src =
+                    "https://starwars-visualguide.com/assets/img/placeholder.jpg";
+                }}
                 alt={item.name}
               />
               <span className="itemName">{item.name}</span>
