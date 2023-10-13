@@ -1,17 +1,30 @@
 .fondo {
-  background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A92131654C1E0B1A4C072A327E49FB30CA8BDED279852FB32CAD9B33B4AAAB1/scale?width=1440&aspectRatio=1.78&format=jpeg");
   background-color: black;
   position: fixed;
+  z-index: -2;
+  transition: filter 0.7s;
+}
+.background-image {
+  background-image: url("https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/5A92131654C1E0B1A4C072A327E49FB30CA8BDED279852FB32CAD9B33B4AAAB1/scale?width=1440&aspectRatio=1.78&format=jpeg");
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: filter 0.7s;
+}
+video {
   object-fit: cover;
   width: 100vw;
   height: 100vh;
-  background-size: cover;
-  z-index: -2;
-  transition: filter 0.7s;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .totalOpacity {
   filter: brightness(100%);
 }
 .lessOpacity {
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
