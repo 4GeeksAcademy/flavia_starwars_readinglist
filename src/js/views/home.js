@@ -6,7 +6,6 @@ import FilmSlider from "../component/filmSlider";
 
 export const Home = () => {
   const { store, actions } = useContext(Context);
-  console.log(store.films);
   return (
     <>
       <Slider arr_section={store.planets} name_section="planets" />

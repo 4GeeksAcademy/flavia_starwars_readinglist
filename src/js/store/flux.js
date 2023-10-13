@@ -121,6 +121,17 @@ export const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ films: data.result }))
           .catch((err) => console.log(err));
       },
+      fetchSinglePlanet: async (id) => {
+        try {
+          const response = await fetch(
+            `https://www.swapi.tech/api/planets/${id}`
+          );
+          const data = await response.json();
+          return data.result;
+        } catch (error) {
+          console.log(error);
+        }
+      },
     },
   };
 };

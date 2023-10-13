@@ -1,0 +1,31 @@
+.singleViewContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.description {
+  display: flex;
+  width: 60vw;
+  height: 40vh;
+  background-image: url("https://images.unsplash.com/photo-1603366615917-1fa6dad5c4fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGxhaW4lMjBibGFjayUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+  border-radius: 1rem;
+}
+.singleImgContainer {
+  width: 60%;
+  height: 100%;
+}
+.singleImgContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.singleDataContainer {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 2rem;
+  color: white;
+}

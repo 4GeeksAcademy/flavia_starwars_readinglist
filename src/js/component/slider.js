@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 import "../../styles/slider.css";
 
 const Slider = ({ arr_section, name_section }) => {
@@ -56,17 +57,19 @@ const Slider = ({ arr_section, name_section }) => {
         <div className="section text-center" id={containerId}>
           {arr_section.map((item, index) => (
             <div className="imgContainer text-white" key={index}>
-              <img
-                className="imgSection"
-                src={`https://starwars-visualguide.com/assets/img/${name_section}/${item.uid}.jpg`}
-                onError={({ currentTarget }) => {
-                  currentTarget.onerror = null; // prevents looping
-                  currentTarget.src =
-                    "https://starwars-visualguide.com/assets/img/placeholder.jpg";
-                }}
-                alt={item.name}
-              />
-              <span className="itemName">{item.name}</span>
+              <Link to={`/${name_section}/${item.uid}`}>
+                <img
+                  className="imgSection"
+                  src={`https://starwars-visualguide.com/assets/img/${name_section}/${item.uid}.jpg`}
+                  onError={({ currentTarget }) => {
+                    currentTarget.onerror = null; // prevents looping
+                    currentTarget.src =
+                      "https://starwars-visualguide.com/assets/img/placeholder.jpg";
+                  }}
+                  alt={item.name}
+                />
+                <span className="itemName">{item.name}</span>
+              </Link>
             </div>
           ))}
         </div>
