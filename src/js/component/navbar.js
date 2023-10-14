@@ -33,8 +33,16 @@ export const Navbar = () => {
         </span>
       </Link>
       <div className="ml-auto">
+        <button className="nav_btn line">
+          <a
+            href="https://www.disneyplus.com/es-es/brand/star-wars"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Stream now
+          </a>
+        </button>
         <Link to="/demo">
-          <button className="nav_btn line">Stream now</button>
           <button className="nav_btn line">Sign in</button>
         </Link>
       </div>
