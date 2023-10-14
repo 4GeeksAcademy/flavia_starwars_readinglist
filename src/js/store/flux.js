@@ -121,10 +121,10 @@ export const getState = ({ getStore, getActions, setStore }) => {
           .then((data) => setStore({ films: data.result }))
           .catch((err) => console.log(err));
       },
-      fetchSinglePlanet: async (id) => {
+      fetchSingle: async (section, id) => {
         try {
           const response = await fetch(
-            `https://www.swapi.tech/api/planets/${id}`
+            `https://www.swapi.tech/api/${section}/${id}`
           );
           const data = await response.json();
           return data.result;

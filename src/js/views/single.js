@@ -10,15 +10,36 @@ export const Single = (props) => {
   const [properties, setProperties] = useState([]);
 
   const itemID = params.theid;
-  const section = params.thename;
+  let section = params.thename;
+
   useEffect(() => {
-    if (section == "planets") {
-      actions.fetchSinglePlanet(itemID).then((data) => {
-        setProperties(Object.entries(data.properties));
-      });
+    if (section === "characters") {
+      section = "people";
     }
+    actions.fetchSingle(section, itemID).then((data) => {
+      setProperties(Object.entries(data.properties));
+    });
   }, [params.theid]);
-  console.log(properties);
+
+  let excludedProperties = [
+    "name",
+    "url",
+    "created",
+    "edited",
+    "homeworld",
+    "people",
+  ];
+
+  let newArray = properties.filter(
+    ([property, value]) => !excludedProperties.includes(property)
+  );
+  let title = "";
+  properties.map(([property, value], index) => {
+    if (property === "name") {
+      title = value;
+    }
+  });
+
   return (
     <>
       <div className="singleViewContainer">
@@ -33,22 +54,30 @@ export const Single = (props) => {
               }}
             />
           </div>
-          <div className="singleDataContainer">
-            {properties.map(([property, value], index) => {
-              let title = "";
-              if (property === "name") {
-                title = value;
-              }
-              return (
-                <>
-                  <h1>{title}</h1>
-                  <div className="singleItemDescription" key={index}>
-                    {property}: {value}
-                  </div>
-                </>
-              );
-            })}
+          <div className="singleTitleContainer">
+            <div className="singleItemDescription">
+              <h1>{title}</h1>
+              <p>
+                Star Wars draws on specific stories from European literature,
+                from Christian or Buddhist religion or mythology, in short, from
+                specific literary or cultural traditions. And it integrates
+                them, remakes them and invents a new story that it proposes to
+                the world and is seen by audiences all over the planet who adopt
+                it as a new source of reference, knowledge and values.
+              </p>
+            </div>
           </div>
+        </div>
+        <div className="details">
+          {newArray.slice(0, 10).map(([property, value], index) => {
+            const formattedProperty = property.replace(/_/g, " ");
+            return (
+              <div className="oneDetail" key={index}>
+                <h5>{formattedProperty}</h5>
+                <p>{value}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
       <Link to="/">
