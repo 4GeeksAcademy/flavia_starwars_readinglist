@@ -11,6 +11,12 @@ export const Single = (props) => {
 
   const itemID = params.theid;
   let section = params.thename;
+  let title = "";
+  properties.map(([property, value], index) => {
+    if (property === "name") {
+      title = value;
+    }
+  });
 
   useEffect(() => {
     if (section === "characters") {
@@ -33,12 +39,10 @@ export const Single = (props) => {
   let newArray = properties.filter(
     ([property, value]) => !excludedProperties.includes(property)
   );
-  let title = "";
-  properties.map(([property, value], index) => {
-    if (property === "name") {
-      title = value;
-    }
-  });
+
+  const handleFavButton = (name, section, id) => {
+    actions.addToFavorites(name, section, id);
+  };
 
   return (
     <>
@@ -57,6 +61,14 @@ export const Single = (props) => {
           <div className="singleTitleContainer">
             <div className="singleItemDescription">
               <h1>{title}</h1>
+              <button
+                className="favoriteButton"
+                onClick={() => {
+                  handleFavButton(title, section, itemID);
+                }}
+              >
+                Add to favorites
+              </button>
               <p>
                 Star Wars draws on specific stories from European literature,
                 from Christian or Buddhist religion or mythology, in short, from

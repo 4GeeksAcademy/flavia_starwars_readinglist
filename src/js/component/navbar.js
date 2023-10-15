@@ -42,8 +42,11 @@ export const Navbar = () => {
             Stream now
           </a>
         </button>
+        <Link to="/favorites">
+          <button className="nav_btn line">Saved</button>
+        </Link>
         <Link to="/demo">
-          <button className="nav_btn line">Sign in</button>
+          <button className="nav_btn line">Log in</button>
         </Link>
       </div>
     </nav>

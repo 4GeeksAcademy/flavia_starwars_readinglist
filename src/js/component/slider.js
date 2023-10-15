@@ -38,6 +38,10 @@ const Slider = ({ arr_section, name_section }) => {
     }
   };
 
+  const handleFavs = (name_item, name_id) => {
+    actions.addToFavorites(name_item, name_section, name_id);
+  };
+
   return (
     <div className="theContainer">
       <button className="arrowButton left" onClick={() => handleScroll("left")}>
@@ -57,6 +61,12 @@ const Slider = ({ arr_section, name_section }) => {
         <div className="section text-center" id={containerId}>
           {arr_section.map((item, index) => (
             <div className="imgContainer text-white" key={index}>
+              <i
+                class="fa-regular fa-bookmark"
+                onClick={() => {
+                  handleFavs(item.name, item.uid);
+                }}
+              ></i>
               <Link to={`/${name_section}/${item.uid}`}>
                 <img
                   className="imgSection"

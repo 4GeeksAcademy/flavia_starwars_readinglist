@@ -8,6 +8,7 @@ export const getState = ({ getStore, getActions, setStore }) => {
       species: [],
       films: [],
       url_next: "",
+      favorites: [],
     },
     actions: {
       fetchPlanets: () => {
@@ -131,6 +132,23 @@ export const getState = ({ getStore, getActions, setStore }) => {
         } catch (error) {
           console.log(error);
         }
+      },
+      addToFavorites: (name, section, id) => {
+        const store = getStore();
+        const isAlreadyInFavorites = store.favorites.some(
+          ([storedName, storedSection, storedId]) =>
+            storedName === name && storedSection === section
+        );
+        if (!isAlreadyInFavorites) {
+          setStore({ favorites: [...store.favorites, [name, section, id]] });
+        }
+      },
+      removeFromFavorites: (idToRemove) => {
+        const store = getStore();
+        let newFavorites = store.favorites.filter(
+          ([name, section, id]) => id !== idToRemove
+        );
+        setStore({ favorites: newFavorites });
       },
     },
   };

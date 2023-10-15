@@ -78,3 +78,13 @@ h4 {
 .imgContainer:hover .itemName {
   opacity: 1;
 }
+
+.fa-bookmark {
+  position: absolute;
+  top: 1rem; /* Ajusta este valor según lo necesites */
+  right: 3rem; /* Ajusta este valor según lo necesites */
+  opacity: 0;
+}
+.imgContainer:hover .fa-bookmark {
+  opacity: 1;
+}
