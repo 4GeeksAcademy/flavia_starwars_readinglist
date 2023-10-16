@@ -1,0 +1,15 @@
+.favoriteContainer {
+    display: grid;
+    grid-template-columns: 
+    repeat(
+        auto-fit,
+        minmax(150px, 1fr)
+    );
+    gap: 32px
+}
+.favoriteImg {
+    border-radius: 2rem;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px gray;
+}
