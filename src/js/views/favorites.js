@@ -9,6 +9,7 @@ export const Favorites = () => {
     actions.removeFromFavorites(id);
   };
   return (
+    <div className="favAllContainer">
     <div className="favoriteContainer">
       {store.favorites.map((item, index) => {
         let name = item[0];
@@ -30,6 +31,7 @@ export const Favorites = () => {
           </div>
         );
       })}
+    </div>
     </div>
   );
 };

@@ -1,15 +1,24 @@
+.favAllContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .favoriteContainer {
-    display: grid;
-    grid-template-columns: 
-    repeat(
-        auto-fit,
-        minmax(150px, 1fr)
-    );
-    gap: 32px
+  width: 80vw;
+  display: grid;
+  place-items: center; /* Centrar horizontal y verticalmente */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 5rem;
+}
+.favoriteDataContainer {
+  width: 30rem;
+  height: 30rem;
+  position: relative;
 }
 .favoriteImg {
-    border-radius: 2rem;
-    width: 100%;
-    height: auto;
-    box-shadow: 0px 0px 30px gray;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 30px gray;
+  object-fit: cover;
 }
