@@ -28,20 +28,11 @@ export const Navbar = () => {
         <span className="navbar-brand mb-0 h1">
           <img
             className="icon"
-            src="https://i0.wp.com/cajadevectores.com/wp-content/uploads/2023/02/BABY-YODA-12PNG.png?fit=1728%2C1728&ssl=1"
+            src="https://www.disneyclips.com/images6/images/millenium-falcon.png"
           />
         </span>
       </Link>
       <div className="ml-auto">
-        <button className="nav_btn line">
-          <a
-            href="https://www.disneyplus.com/es-es/brand/star-wars"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Stream now
-          </a>
-        </button>
         <Link to="/favorites">
           <button className="nav_btn line">Saved</button>
         </Link>

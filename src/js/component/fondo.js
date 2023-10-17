@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export const Fondo = () => {
   const [scroll, setScroll] = useState(false);
   const [videoEnded, setVideoEnded] = useState(false);
-  console.log(videoEnded)
+  console.log(videoEnded);
   useEffect(() => {
     gsap.utils.toArray(".navbar").forEach((elem) => {
       ScrollTrigger.create({
@@ -20,13 +20,12 @@ export const Fondo = () => {
   }, []);
 
   const handleVideoEnded = () => {
-    console.log("Video ended");
     setVideoEnded(true);
   };
-
   return (
-    <div className={`fondo ${scroll ? "totalOpacity " : "lessOpacity"}`}>
+    <div className={`fondo ${scroll ? "totalBrightness" : "lessBrightness"}`}>
       <video
+        className={`${videoEnded? "noOpacity": ""}`}
         playsInline
         autoPlay
         muted
@@ -39,11 +38,7 @@ export const Fondo = () => {
           type="video/webm"
         ></source>
       </video>
-      {videoEnded && (
-        <div
-          className="background-image"
-        ></div>
-      )}
+      <div className="background-image"></div>
     </div>
   );
 };
