@@ -74,14 +74,15 @@ h4 {
   padding: 0.5rem;
   opacity: 0;
   transition: opacity 0.9s ease;
+  color: white;
 }
 .imgContainer:hover .itemName {
   opacity: 1;
 }
 .saveButton {
   position: absolute;
-  top: 1rem; /* Ajusta este valor según lo necesites */
-  right: 3rem; /* Ajusta este valor según lo necesites */
+  top: 1rem;
+  right: 3rem;
   opacity: 0;
   border-radius: 2rem;
   padding: 1rem 2rem;

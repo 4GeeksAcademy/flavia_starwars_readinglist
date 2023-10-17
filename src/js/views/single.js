@@ -40,8 +40,11 @@ export const Single = (props) => {
     ([property, value]) => !excludedProperties.includes(property)
   );
 
+  const [saveButton, setSavedButton] = useState(false);
+
   const handleFavButton = (name, section, id) => {
     actions.addToFavorites(name, section, id);
+    setSavedButton(true);
   };
 
   return (
@@ -62,12 +65,12 @@ export const Single = (props) => {
             <div className="singleItemDescription">
               <h1>{title}</h1>
               <button
-                className="favoriteButton"
+                className="singleSaveButton"
                 onClick={() => {
                   handleFavButton(title, section, itemID);
                 }}
               >
-                Add to favorites
+                {saveButton ? "Saved" : "Save"}
               </button>
               <p>
                 Star Wars draws on specific stories from European literature,

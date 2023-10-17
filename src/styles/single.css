@@ -62,3 +62,10 @@
 .oneDetail * {
   text-transform: capitalize;
 }
+.singleSaveButton {
+  border-radius: 2rem;
+  padding: 1rem 2.5rem;
+  background-color: rgb(229, 86, 4);
+  color: white;
+  margin-bottom: 2rem;
+}
