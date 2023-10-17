@@ -9,7 +9,6 @@ export const Favorites = () => {
     actions.removeFromFavorites(id);
   };
   return (
-    <div className="favAllContainer">
     <div className="favoriteContainer">
       {store.favorites.map((item, index) => {
         let name = item[0];
@@ -18,20 +17,21 @@ export const Favorites = () => {
         return (
           <div className="favoriteDataContainer">
             <img
-            className="favoriteImg"
+              className="favoriteImg"
               src={`https://starwars-visualguide.com/assets/img/${section}/${id}.jpg`}
             />
-            <span>{name}</span>
-            <i
-              class="fa-regular fa-trash-can"
-              onClick={() => {
-                handleDeleteButton(id);
-              }}
-            ></i>
+            <span>
+              {name}
+              <i
+                class="fa-regular fa-trash-can"
+                onClick={() => {
+                  handleDeleteButton(id);
+                }}
+              ></i>
+            </span>
           </div>
         );
       })}
-    </div>
     </div>
   );
 };

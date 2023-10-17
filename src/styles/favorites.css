@@ -1,19 +1,21 @@
-.favAllContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .favoriteContainer {
   width: 80vw;
   display: grid;
   place-items: center; /* Centrar horizontal y verticalmente */
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 5rem;
+  margin: auto;
 }
 .favoriteDataContainer {
   width: 30rem;
-  height: 30rem;
+  height: 30rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
   position: relative;
+  height: 100%;
+  font-family: "Star Wars", sans-serif;
 }
 .favoriteImg {
   border-radius: 2rem;
@@ -21,4 +23,39 @@
   height: 100%;
   box-shadow: 0px 0px 30px gray;
   object-fit: cover;
+  position: relative;
+}
+.favoriteDataContainer span {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 2rem;
+  padding: 5px;
+  display: flex;
+  background: transparent; /* Añadido para reiniciar el fondo */
+  transition: background 0.3s; /* Animación de transición */
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+  overflow-x: hidden;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20%;
+}
+.favoriteDataContainer:hover span {
+  background: rgba(255, 255, 255, 0.747); /* Fondo negro en hover */
+  color: black;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+.favoriteDataContainer .fa-regular.fa-trash-can {
+  opacity: 0;
+}
+
+.favoriteDataContainer:hover .fa-regular.fa-trash-can {
+  opacity: 1; /* Opacidad 1 en hover */
+  color: rgb(102, 11, 11); /* Color rojo en hover */
 }
