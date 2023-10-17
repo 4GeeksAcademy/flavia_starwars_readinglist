@@ -37,9 +37,14 @@ const Slider = ({ arr_section, name_section }) => {
       actions.fetchMoreSpecies();
     }
   };
-
-  const handleFavs = (name_item, name_id) => {
+  const [savedButtons, setSavedButtons] = useState(
+    new Array(arr_section.length).fill(false)
+  );
+  const handleFavs = (name_item, name_id, index) => {
     actions.addToFavorites(name_item, name_section, name_id);
+    const updatedButtons = [...savedButtons];
+    updatedButtons[index] = true;
+    setSavedButtons(updatedButtons);
   };
 
   return (
@@ -61,12 +66,15 @@ const Slider = ({ arr_section, name_section }) => {
         <div className="section text-center" id={containerId}>
           {arr_section.map((item, index) => (
             <div className="imgContainer text-white" key={index}>
-              <i
-                class="fa-regular fa-bookmark"
+              <button
+                class="saveButton"
                 onClick={() => {
-                  handleFavs(item.name, item.uid);
+                  handleFavs(item.name, item.uid, index);
                 }}
-              ></i>
+                disabled={savedButtons[index]}
+              >
+                {savedButtons[index] ? "Saved" : "Save"}
+              </button>
               <Link to={`/${name_section}/${item.uid}`}>
                 <img
                   className="imgSection"

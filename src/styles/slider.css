@@ -78,13 +78,16 @@ h4 {
 .imgContainer:hover .itemName {
   opacity: 1;
 }
-
-.fa-bookmark {
+.saveButton {
   position: absolute;
   top: 1rem; /* Ajusta este valor según lo necesites */
   right: 3rem; /* Ajusta este valor según lo necesites */
   opacity: 0;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  background-color: rgb(229, 86, 4);
+  color: white;
 }
-.imgContainer:hover .fa-bookmark {
+.imgContainer:hover .saveButton {
   opacity: 1;
 }
