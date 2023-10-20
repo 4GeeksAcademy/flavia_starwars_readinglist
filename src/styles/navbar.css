@@ -2,8 +2,7 @@ nav {
   margin-bottom: 55rem;
 }
 .icon {
-  width: 10rem;
-  height: 8rem;
+  width: 6rem;
   margin-left: 2rem;
 }
 .nav_btn {
@@ -39,4 +38,9 @@ nav {
 .line:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+@media only screen and (max-width: 1200px) {
+  nav {
+    margin-bottom: 28rem;
+  }
 }
