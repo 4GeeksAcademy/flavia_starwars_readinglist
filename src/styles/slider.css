@@ -92,9 +92,21 @@ h4 {
 .imgContainer:hover .saveButton {
   opacity: 1;
 }
-@media only screen and (max-width: 1290px) {
+@media only screen and (max-width: 600px) {
+  .imgContainer {
+    width: 7rem;
+    height: 8rem;
+  }
+}
+@media only screen and (min-width: 650px) {
   .imgContainer {
     width: 15rem;
     height: 15rem;
+  }
+}
+@media only screen and (min-width: 1300px) {
+  .imgContainer {
+    width: 25rem;
+    height: 25rem;
   }
 }

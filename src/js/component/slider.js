@@ -67,7 +67,7 @@ const Slider = ({ arr_section, name_section }) => {
           {arr_section.map((item, index) => (
             <div className="imgContainer text-white" key={index}>
               <button
-                class="saveButton"
+                className="saveButton"
                 onClick={() => {
                   handleFavs(item.name, item.uid, index);
                 }}

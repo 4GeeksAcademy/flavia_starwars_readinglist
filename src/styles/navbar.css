@@ -2,7 +2,7 @@ nav {
   margin-bottom: 55rem;
 }
 .icon {
-  width: 6rem;
+  width: 3rem;
   margin-left: 2rem;
 }
 .nav_btn {
@@ -11,7 +11,7 @@ nav {
   color: rgba(232, 171, 66, 0.432);
   margin-left: 2rem;
   margin-right: 2rem;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Star Wars", sans-serif;
 }
 .nav_btn a {
@@ -38,6 +38,13 @@ nav {
 .line:hover::before {
   transform: scaleX(1);
   transform-origin: left;
+}
+@media only screen and (max-width: 1300px) {
+  .saveButton {
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 1rem 1rem;
+  }
 }
 @media only screen and (max-width: 1200px) {
   nav {
