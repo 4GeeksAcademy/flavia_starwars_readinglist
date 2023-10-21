@@ -19,11 +19,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav
-      className={`navbar sticky-top ${
-        isInView ? "bg-transparent" : "bg-black"
-      }`}
-    >
+    <nav className={`navbar ${isInView ? "bg-transparent" : "bg-black"}`}>
       <Link to="/">
         <span className="navbar-brand mb-0 h1">
           <img

@@ -39,15 +39,15 @@ nav {
   transform: scaleX(1);
   transform-origin: left;
 }
+
 @media only screen and (max-width: 1300px) {
   .saveButton {
     top: 0.5rem;
     right: 0.5rem;
     padding: 1rem 1rem;
   }
-}
-@media only screen and (max-width: 1200px) {
   nav {
-    margin-bottom: 28rem;
+    margin-bottom: 30rem;
   }
 }
+
