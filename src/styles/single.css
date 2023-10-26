@@ -70,3 +70,25 @@
   color: white;
   margin-bottom: 2rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .singleViewContainer {
+    width: 100%;
+  }
+  .singleImgContainer {
+    width: 100%;
+  }
+  .singleTitleContainer {
+    width: 100%;
+  }
+  .details {
+    align-items: start;
+    flex-direction: column;
+  }
+  .oneDetail:first-child {
+    border-left: 1px solid white;
+  }
+  .description {
+    flex-direction: column;
+  }
+}

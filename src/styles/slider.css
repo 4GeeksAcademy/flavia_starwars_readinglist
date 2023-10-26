@@ -94,8 +94,8 @@ h4 {
 }
 @media only screen and (max-width: 600px) {
   .imgContainer {
-    width: 7rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
   }
 }
 @media only screen and (min-width: 650px) {
