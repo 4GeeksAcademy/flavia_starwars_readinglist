@@ -59,3 +59,12 @@
   opacity: 1; /* Opacidad 1 en hover */
   color: rgb(102, 11, 11); /* Color rojo en hover */
 }
+@media only screen and (max-width: 600px) {
+  .favoriteDataContainer {
+    width: 15rem;
+    height: 15rem !important;
+  }
+  .favoriteContainer {
+    width: 100vw;
+  }
+}
